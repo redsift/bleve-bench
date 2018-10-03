@@ -8,6 +8,7 @@ import (
 	"sync"
 
 	"github.com/blevesearch/bleve"
+	bmapping "github.com/blevesearch/bleve/mapping"
 )
 
 // Indexer represents the indexing engine.
@@ -96,7 +97,7 @@ func (i *Indexer) Count() (uint64, error) {
 	return i.alias.DocCount()
 }
 
-func mapping() *bleve.IndexMapping {
+func mapping() *bmapping.IndexMappingImpl {
 	// a generic reusable mapping for english text
 	standardJustIndexed := bleve.NewTextFieldMapping()
 	standardJustIndexed.Store = false

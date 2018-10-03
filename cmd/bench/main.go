@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/otoolep/bleve-bench"
+	"github.com/redsift/bleve-bench"
 )
 
 var batchSize = flag.Int("batchSize", 100, "batch size for indexing")
